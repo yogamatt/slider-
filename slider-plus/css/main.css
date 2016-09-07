@@ -1,0 +1,222 @@
+/* Set */
+
+body {
+	font-size: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h1, h2 {
+	margin: .35em 0 .875em;
+	color: rgba(51,51,51,.9);
+}
+h3, h4 {
+	margin: 0 0 .75em;
+	color: rgba(0,0,0,.75);
+}
+h5,h6 {
+	margin: 0 0 .65em;
+	color: rgba(255,255,48,.75);
+}
+
+p {
+	color: rgba(51,51,51,.8);
+}
+
+em {
+	font-style: italic;
+	color: rgba(51,51,51,.7);
+}
+
+label {
+	cursor: default;
+}
+
+input[type="text"],
+textarea {
+	width: 300px;
+	resize: both;
+}
+
+
+/* Unset */
+
+.title {
+	position: relative;
+}
+	.title:before {
+		content: '';
+		position: relative;
+		z-index: -1;
+		background-image: url('../images/icon.png');
+		background-size: contain;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		width: 30px;
+		height: 40px;
+	}
+
+.title h1 {
+	position: relative;
+	margin: .5em 0 .875em;
+	color: rgba(45,153,236,.95);
+	font-size: 2.25em;
+	line-height: 1em;
+	font-weight: 800;
+	text-transform: capitalize;
+}
+
+.slide {
+	margin: 1em 0;
+    padding: .75em 1em;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    width: 90%;
+    overflow: hidden;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+	.slide:hover {
+		-moz-box-shadow: 0 0 2px 1px rgba(0,0,0,.125);
+		-webkit-box-shadow: 0 0 2px 1px rgba(0,0,0,.125);
+		box-shadow: 0 0 2px 1px rgba(0,0,0,.125);
+	}
+
+.slide h3:first-child {
+	color: rgba(0,0,0,.25);
+	font-weight: 400;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	-webkit-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+	.slide.safe h3.slide-title {
+		color: rgba(0,0,0,.65);
+	}
+
+.flex-container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.slider-plus-image,
+.slider-plus-title,
+.slider-plus-description,
+.slider-plus-values {
+	position: relative;
+	min-height: 40px;
+}
+	.slider-plus-image img {
+		max-width: 750px;
+		height: auto;
+	}
+
+.slider-plus-info {
+	margin: 0;
+	padding: 0 0 0 .875em;
+	min-width: 300px;
+}
+	.slider-plus-title h2 {
+		margin: 0 0 .75em;
+		padding: 0;
+		line-height: 1.25em;
+		color: rgba(0,0,0,.75);
+		border-bottom: 1px solid rgba(0,0,0,.75);
+	}
+		.slider-plus-title input[type="text"] {
+			line-height: 1.75em;
+		}
+	.slider-plus-description p {
+		margin: 0 0 .65em;
+	}
+	.slider-plus-values em {
+		margin: 0 0 .5em;
+	}
+
+.edit-container {
+	opacity: 0;
+	position: absolute;
+	font-size: 1.25em;
+	color: #ddd;
+	top: 0;
+	right: 0;
+	left: 0;
+	height: 100%;
+}
+
+.edit-button:after {
+	content: '\f06e';
+	font-family: FontAwesome;
+	position: absolute;
+	z-index: 3;
+	top: 4px;
+	right: 30px;
+}
+
+.delete-button:after {
+	content: '\f00d';
+	font-family: FontAwesome;
+	position: absolute;
+	z-index: 3;
+	top: 4px;
+	right: 10px;
+}
+	div:not(.slider-plus-image) .edit-button:hover:after,
+	div:not(.slider-plus-image) .delete-button:hover:after {
+		color: #333;
+		cursor: pointer;
+	}
+		.slider-plus-image .edit-button:hover:after,
+		.slider-plus-image .delete-button:hover:after {
+			color: #fff !important;
+			cursor: pointer;
+		}
+		.edit-button.editing:hover:after,
+		.delete-button.editing:hover:after {
+			color: #333 !important;
+		}
+
+
+.edit-container-slide {
+	display: none;
+}
+
+.edit-content {
+	margin: 0;
+	padding: .5em;
+	position: absolute;
+	z-index: 2;
+    top: 0;
+    right: 0;
+    height: 80px;
+    background: #fff;
+    color: #333;
+    font-size: .75em;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    justify-content: flex-end;
+}
+	.edit-content input[type="submit"] {
+		float: right;
+	}
+
+
+
+
+
+
